@@ -57,8 +57,8 @@ router.post('/create', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     db.User.findById(req.params.id)
         //.then(wand => console.log(wand._id.toString()));
-        .then(wand => res.send('You\'ll be editing user ' + wand._id.toString()));
-        // .then(user => res.render('edit-form', {user: user}));
+        // .then(wand => res.send('You\'ll be editing user ' + wand._id.toString()));
+        .then(user => res.render('users/edit-form', {user: user}));
 });
 
 /* Export these routes so that they are accessible in `server.js`

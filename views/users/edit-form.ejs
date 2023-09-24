@@ -11,8 +11,25 @@
         <h2>Edit User</h2>        
     </section>
 
-    
-
+    <form method="POST" action="/users/<%= user._id %>/update?_method=PUT">
+        <!-- Name input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= user.name %>" required>
+        <br>
+        <!-- Alias input -->
+        <label for="alias">Alias:</label>
+        <input type="text" id="alias" name="alias" value="<%= user.alias %>">
+        <br>
+        <!-- Hometown input -->
+        <label for="hometown">Hometown:</label>
+        <input type="text" id="hometown" name="hometown" value="<%= user.hometown %>">
+        <br>
+        <!-- Email input -->
+        <label for="email">Rating:</label>
+        <input type="text" id="email" name="email" value="<%= user.email %>">
+        <br>   
+        <input type="submit" value="Edit User">
+    </form>
 
 </body>
 </html>
