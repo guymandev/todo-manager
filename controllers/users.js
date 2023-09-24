@@ -18,13 +18,14 @@ const db = require('../models')
 
 // Index Route (GET/Read): Will display all wands
 router.get('/', function (req, res) {
-    // db.Wand.find({})
-    //     .then(wands => {
-    //         res.render('wand-index', {
-    //             wands: wands
-    //         })
-    //     })
-    res.send('User index');
+    db.User.find({})
+        .then(users => {
+            // res.render('user-index', {
+            //     users: users
+            // })
+            res.send(users);
+        })
+    // res.send('User index');
 });
 
 
