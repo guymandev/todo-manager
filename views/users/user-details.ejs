@@ -11,12 +11,26 @@
     <div class="user-details">        
         <section class="user-section-details"> 
             <div>           
-                <h2 class="user-name"><%= user.name %></h2>
-                <p><strong>Alias:</strong> <%= user.alias %></p>
-                <p><strong>Hometown:</strong> <%= user.hometown %></p>
-                <p><strong>Email:</strong> <%= user.email %></p>                
+                <h1 class="user-name"><%= user.name %></h1>
+                <p><strong>Alias - </strong> <%= user.alias %></p>
+                <p><strong>Hometown - </strong> <%= user.hometown %></p>
+                <p><strong>Email - </strong> <%= user.email %></p>                
             </div>                   
         </section>
+    </div>
+    <br>
+    <div>
+        <h2>ToDos</h2>
+        <br>
+        <ul>
+            <% for (let todo of user.todos) { %>
+                <h3><u><%= todo.item %></u></h3>
+                <p><strong>Description - </strong> <%= todo.description %></p>
+                <p><strong>Due Date - </strong> <%= todo.dueDate %></p>
+                <p><strong>Priority - </strong> <%= todo.priority %></p>
+                <p><strong>Status - </strong><%= todo.status %></p>
+            <% } %>
+        </ul>
     </div>
 
 </body>
