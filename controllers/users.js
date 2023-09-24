@@ -33,15 +33,13 @@ router.get('/', function (req, res) {
 router.get('/:id', function (req, res) {
     db.User.findById(req.params.id)
         .then(user => {
-            // res.render('user-details', {
-            //     wand: wand
-            // });
-            res.send(user);
+            res.render('users/user-details', {
+                user: user
+            });
+            // res.send(user);
         })
         .catch(() => res.send('404 Error: Page Not Found'))
 });
-
-
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
 // creates a new wand document using the form data, 
