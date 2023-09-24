@@ -14,7 +14,8 @@ const db = require('./models');
 
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */  
- 
+const usersCtrl = require('./controllers/users'); 
+const todosCtrl = require('./controllers/todos');
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -55,7 +56,13 @@ app.get('/', function (req, res) {
     res.send('To-do Manager');
 }); 
 
- 
+
+// This tells our app to look at the `controllers/wands.js` file 
+// to handle all routes that begin with `localhost:3000/wands`
+app.use('/users', usersCtrl);
+// This tells our app to look at the `controllers/wands.js` file 
+// to handle all routes that begin with `localhost:3000/wands`
+app.use('/todos', todosCtrl);
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
