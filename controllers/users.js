@@ -52,6 +52,15 @@ router.post('/create', (req, res) => {
         .then(user => res.send('User ' + user._id.toString() + ' created'));
 });
 
+// Edit Route (GET/Read): This route renders a form
+// the user will use to PUT (edit) properties of an existing wand
+router.get('/:id/edit', (req, res) => {
+    db.User.findById(req.params.id)
+        //.then(wand => console.log(wand._id.toString()));
+        .then(wand => res.send('You\'ll be editing user ' + wand._id.toString()));
+        // .then(user => res.render('edit-form', {user: user}));
+});
+
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
 module.exports = router;
