@@ -20,10 +20,10 @@ const db = require('../models')
 router.get('/', function (req, res) {
     db.User.find({})
         .then(users => {
-            // res.render('user-index', {
-            //     users: users
-            // })
-            res.send(users);
+            res.render('users/user-index', {
+                users: users
+            })
+            // res.send(users);
         })
     // res.send('User index');
 });
