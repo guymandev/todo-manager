@@ -18,6 +18,22 @@ const db = require('../models');
 
 
 
+// Create Route (POST/Create): 
+// POST localhost:3000/reviews/create
+//This route receives the POST request sent from the new route,
+// creates a new wand document using the form data, 
+// and redirects the user to the User's show page
+router.post('/create/:userId', (req, res) => {
+    db.User.findByIdAndUpdate(
+        req.params.userId,
+        { $push: { todos: req.body } },
+        { new: true }
+    )
+        // .then(user => res.redirect('/users/' + req.params.wandId));
+        .then(user => res.send('New Todo created for User ' + req.params.userId));
+});
+
+
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
 module.exports = router;

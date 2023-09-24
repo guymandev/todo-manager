@@ -42,8 +42,8 @@ router.get('/:id', function (req, res) {
 });
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
-// creates a new wand document using the form data, 
-// and redirects the user to the new wands's show page
+// creates a new User document using the form data, 
+// and redirects the user to the new User's show page
 router.post('/create', (req, res) => {
     //console.log(req.body);
     db.User.create(req.body)
