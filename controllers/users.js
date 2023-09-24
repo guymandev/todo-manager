@@ -28,6 +28,20 @@ router.get('/', function (req, res) {
     // res.send('User index');
 });
 
+// Show Route (GET/Read): Will display an individual wand document
+// using the URL parameter (which is the document _id)
+router.get('/:id', function (req, res) {
+    db.User.findById(req.params.id)
+        .then(user => {
+            // res.render('user-details', {
+            //     wand: wand
+            // });
+            res.send(user);
+        })
+        .catch(() => res.send('404 Error: Page Not Found'))
+});
+
+
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
 // creates a new wand document using the form data, 

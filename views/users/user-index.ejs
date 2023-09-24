@@ -16,10 +16,14 @@
         <section class="listings">
             <ul>
                 <% for (let user of users) { %>
-                <li>        
-
+                <li class="user-index-item">        
+                    <div>
                     <a href="/users/<%= user._id %>"><h4><%= user.name %></h4></a>
-                                                                              
+                    </div>
+                    <div>
+                        <button class="user-action-buttons">Edit</button>
+                        <button class="user-action-buttons">Delete</button>
+                    </div>
                 </li>
                 <% } %>
             </ul>

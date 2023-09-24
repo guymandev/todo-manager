@@ -1,0 +1,19 @@
+.user-index-item {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border: 1px solid purple;
+    max-width: 400px;
+
+}
+
+.user-action-buttons {
+
+    height: 100%;
+    width: 50px;
+    border-radius: 20%;
+    text-align: center;
+    padding: 0;
+
+}
