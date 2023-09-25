@@ -28,6 +28,13 @@ router.get('/', function (req, res) {
     // res.send('User index');
 });
 
+// New Route (GET/Read): This route renders a form 
+// which the user will fill out to POST (create) a new user
+router.get('/new', (req, res) => {
+    // res.render('new-form');    
+    res.send('You are on the New page');    
+});
+
 // Show Route (GET/Read): Will display an individual wand document
 // using the URL parameter (which is the document _id)
 router.get('/:id', function (req, res) {
@@ -71,7 +78,8 @@ router.put('/:id/update', (req, res) => {
         {new: true}
     )
     // .then(user => res.send('You\ve updated user ' + user._id));
-    .then(user => res.json(user));
+    // .then(user => res.json(user));
+    .then(user => res.redirect('/users/' + user._id));
 });
 
 
