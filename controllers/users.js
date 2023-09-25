@@ -61,6 +61,20 @@ router.get('/:id/edit', (req, res) => {
         .then(user => res.render('users/edit-form', {user: user}));
 });
 
+// Update Route (PUT/Update): This route receives the PUT request sent from the edit route, 
+// edits the specified user document using the form data,
+// and redirects the user back to the show page for the updated user.
+router.put('/:id/update', (req, res) => {
+    db.User.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true}
+    )
+    // .then(user => res.send('You\ve updated user ' + user._id));
+    .then(user => res.json(user));
+});
+
+
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
 module.exports = router;
