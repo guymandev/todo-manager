@@ -48,3 +48,10 @@ h2 {
 .button:hover {
   background-color: #c2c7c7;
 }
+
+input {
+
+    height: 100%;
+    width: 50px;
+
+}
