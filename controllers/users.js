@@ -31,8 +31,8 @@ router.get('/', function (req, res) {
 // New Route (GET/Read): This route renders a form 
 // which the user will fill out to POST (create) a new user
 router.get('/new', (req, res) => {
-    // res.render('new-form');    
-    res.send('You are on the New page');    
+    res.render('users/new-form');    
+    // res.send('You are on the New page');    
 });
 
 // Show Route (GET/Read): Will display an individual wand document
@@ -55,8 +55,9 @@ router.post('/create', (req, res) => {
     //console.log(req.body);
     db.User.create(req.body)
         //.then(wand => res.json(wand));
+        .then(user => res.redirect('/users/' + user._id));
         // .then(user => res.redirect('/user/' + user._id.toString()));
-        .then(user => res.send('User ' + user._id.toString() + ' created'));
+        //.then(user => res.send('User ' + user._id.toString() + ' created'));
 });
 
 // Edit Route (GET/Read): This route renders a form
@@ -77,9 +78,18 @@ router.put('/:id/update', (req, res) => {
         req.body,
         {new: true}
     )
-    // .then(user => res.send('You\ve updated user ' + user._id));
+    // .then(user => res.send('You\ve update user ' + user._id));
     // .then(user => res.json(user));
     .then(user => res.redirect('/users/' + user._id));
+});
+
+// Destroy Route (DELETE/Delete): This route deletes a pet document 
+// using the URL parameter (which will always be the pet document's ID)
+router.delete('/:id/delete', (req, res) => {
+    // res.send('User ID to be deleted: ' + req.params.id);
+    db.User.findByIdAndRemove(req.params.id)
+        // .then(user => res.send('You\'ve deleted user ' + user._id.toString()));
+        .then(() => res.redirect('/users'));
 });
 
 

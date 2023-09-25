@@ -11,7 +11,11 @@
     <section class="hero">
         <h2>List of Users</h2>
     </section>
-
+    <br>    
+    <div class="create-new-button">
+        <a class="button" href="/users/new">Create New User</a>
+    </div>
+    <br>
     <main>
         <section class="listings">
             <ul>
@@ -19,10 +23,10 @@
                 <li class="user-index-item">        
                     <div>
                     <a href="/users/<%= user._id %>"><h4><%= user.name %></h4></a>
-                    </div>
+                    </div class="users-buttons-group">
                     <div>
                         <a class="button" href="/users/<%= user._id %>/edit">Edit</a>
-                        <button class="user-action-buttons">Delete</button>
+                        <a class="button" href="/users/<%= user._id %>/delete">Delete</a>                        
                     </div>
                 </li>
                 <% } %>

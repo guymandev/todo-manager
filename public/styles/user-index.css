@@ -1,14 +1,22 @@
+h2 {
+    text-align: center;
+}
+
+.create-new-button {
+  text-align: center;
+}
+
 .user-index-item {
 
     display: flex;
     justify-content: space-between;
     margin: 0;
     border: 1px solid purple;
-    max-width: 400px;
+    max-width: 400px;    
 
 }
 
-.user-action-buttons {
+/* .user-action-buttons {
 
     height: 100%;
     width: 50px;
@@ -16,19 +24,27 @@
     text-align: center;
     padding: 0;
 
-}
+} */
+
+/* .users-buttons-group {
+
+  vertical-align: middle;
+
+} */
 
 .button {
     display: inline-block;
     padding: 10px 20px;
+    width: 50px;
     text-align: center;
     text-decoration: none;
+    vertical-align: auto;
     color: #ffffff;
     background-color: #7aa8b7;
     border-radius: 6px;
     outline: none;
     transition: 0.3s;
-  }
-  .button:hover {
-    background-color: #c2c7c7;
-  }
+}
+.button:hover {
+  background-color: #c2c7c7;
+}
