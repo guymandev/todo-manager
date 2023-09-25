@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', {title: 'Create Todo'}) %>
+    <link rel="stylesheet" href="/styles/todo-details.css">
+</head>
+
+<body>
+    
+    <%- include('../partials/nav.ejs') %>
+    <h2>Create Todo for <%= user.name %></h2>
+
+    <form method="POST" action="/todos/create/<%= user._id %>">
+        <!-- Item input -->
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" required>
+        <br>       
+        <!-- Description input -->
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description">
+        <br>        
+        <!-- DueDate input -->
+        <label for="dueDate">Due Date:</label>
+        <input type="text" id="dueDate" name="dueDate">
+        <br>
+        <!-- Priority input -->
+        <label for="priority">Priority:</label>
+        <select name="priority" id="priority"> 
+            <option value="High">High</option> 
+            <option value="Normal" selected>Normal</option> 
+            <option value="Low">Low</option>
+        </select> 
+        <!-- Status input -->       
+        <label for="status">Status:</label>
+        <select name="status" id="status"> 
+            <option value="Not Started" selected>Not Started</option> 
+            <option value="In progress">In progress</option> 
+            <option value="Done">Done</option>
+        </select> 
+        <br>
+        <input type="submit" value="Create ToDo">
+    </form>
+
+</body>
+
+</html>

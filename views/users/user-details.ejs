@@ -23,7 +23,7 @@
     <br>
     <div>
         <h2>ToDos</h2>
-        <br>
+        <a href="/todos/new/<%= user._id %>"><h4>Create Todo</h4></a>
         <ul>
             <% for (let todo of user.todos) { %>
                 <li class="todo-item">

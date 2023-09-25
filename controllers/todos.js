@@ -16,7 +16,12 @@ const db = require('../models');
 /* Routes
 --------------------------------------------------------------- */
 
-
+// New Route: GET localhost:3000/todos/new/:userId
+router.get('/new/:userId', (req, res) => {
+    db.User.findById(req.params.userId)
+        // .then(res.send('About to add todo for user ' + req.params.userId));
+        .then(user => res.render('todos/new-form', { user: user }))
+});
 
 // Create Route (POST/Create): 
 // POST localhost:3000/reviews/create
@@ -29,8 +34,8 @@ router.post('/create/:userId', (req, res) => {
         { $push: { todos: req.body } },
         { new: true }
     )
-        // .then(user => res.redirect('/users/' + req.params.wandId));
-        .then(user => res.send('New Todo created for User ' + req.params.userId));
+        .then(user => res.redirect('/users/' + req.params.userId));
+        // .then(user => res.send('New Todo created for User ' + req.params.userId));
 });
 
 
