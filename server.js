@@ -53,7 +53,7 @@ app.use(methodOverride('_method'));
 
 // HOME Route
 app.get('/', function (req, res) {
-    res.send('To-do Manager');
+    res.render('home');
 }); 
 
 
