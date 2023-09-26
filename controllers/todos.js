@@ -82,6 +82,23 @@ router.put('/:todoId/update', (req, res) => {
     });
 });
 
+// Destroy Route (DELETE/Delete): This route deletes a todo document 
+// using the URL parameter (which will always be the todo document's ID)
+router.delete('/:todoId/delete', (req, res) => {
+    db.User.findOneAndUpdate(
+        { 
+            'todos._id': req.params.todoId
+        },
+        { 
+            $pull: { todos: { _id: req.params.todoId } } 
+        },
+        { new: true }
+    )
+    // .then(restaurant => console.log(restaurant));
+    .then(user => {
+        res.redirect('/users/' + user._id);
+    });
+});
 
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */

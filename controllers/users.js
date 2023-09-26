@@ -83,8 +83,8 @@ router.put('/:id/update', (req, res) => {
     .then(user => res.redirect('/users/' + user._id));
 });
 
-// Destroy Route (DELETE/Delete): This route deletes a pet document 
-// using the URL parameter (which will always be the pet document's ID)
+// Destroy Route (DELETE/Delete): This route deletes a user document 
+// using the URL parameter (which will always be the user document's ID)
 router.delete('/:id/delete', (req, res) => {
     // res.send('User ID to be deleted: ' + req.params.id);
     db.User.findByIdAndRemove(req.params.id)
