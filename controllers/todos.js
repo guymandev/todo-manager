@@ -53,6 +53,36 @@ router.get('/:todoId/edit', (req, res) => {
     });    
 });
 
+// Update Route (PUT/Update): This route receives the PUT request sent from the edit form, 
+// edits the specified user document using the form data,
+// and redirects the user back to the show page for the updated user.
+router.put('/:todoId/update', (req, res) => {
+    db.User.findOneAndUpdate(
+        { 
+            'todos._id': req.params.todoId 
+        },
+        {
+            $set: {
+                'todos.$.item': req.body.item,
+                'todos.$.description': req.body.description,
+                'todos.$.dueDate': req.body.dueDate,
+                'todos.$.priority': req.body.priority,
+                'todos.$.status': req.body.status
+            }
+        },
+        { new: true },
+        { 'todos.$': true, _id: false }
+    )
+    .then(user => {
+        // format query results to appear in one object, 
+	    // rather than an object containing an array of one object
+        // console.log(user.todos[0])
+        // res.send(user.todos[0]);
+        res.redirect('/users/' + user._id);
+    });
+});
+
+
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
 module.exports = router;
