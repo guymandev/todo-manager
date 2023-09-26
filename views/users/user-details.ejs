@@ -32,7 +32,15 @@
                 <p><strong>Due Date - </strong> <%= todo.dueDate %></p>
                 <p><strong>Priority - </strong> <%= todo.priority %></p>
                 <p><strong>Status - </strong><%= todo.status %></p>
-                </li>
+                
+                <div class="users-buttons-group">
+                    <a class="button" href="/users/<%= user._id %>/edit">Edit</a>
+                    <form method="POST" action="/users/<%= user._id %>/delete?_method=DELETE">
+                        <input class="delete-button" value="Delete" type="submit"/>
+                    </form>                                                
+                </div>
+                
+            </li>
             <% } %>
         </ul>
     </div>

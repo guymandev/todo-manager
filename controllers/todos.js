@@ -24,9 +24,9 @@ router.get('/new/:userId', (req, res) => {
 });
 
 // Create Route (POST/Create): 
-// POST localhost:3000/reviews/create
+// POST localhost:3000/todos/create
 //This route receives the POST request sent from the new route,
-// creates a new wand document using the form data, 
+// creates a new todo document using the form data, 
 // and redirects the user to the User's show page
 router.post('/create/:userId', (req, res) => {
     db.User.findByIdAndUpdate(
@@ -38,6 +38,24 @@ router.post('/create/:userId', (req, res) => {
         // .then(user => res.send('New Todo created for User ' + req.params.userId));
 });
 
+// Edit Route (GET/Read): This route renders a form
+// the user will use to PUT (edit) properties of an existing todo
+router.get('/:todoId/edit', (req, res) => {
+    db.User.findOne(
+        {
+            'todos._id': req.params.todoId
+        },
+        { 'todos.$': true, _id: false}
+    )
+    .then(user => {
+        res.send(user.todos[0]);
+    });
+
+    // db.User.findById(req.params.id)
+    //     //.then(wand => console.log(wand._id.toString()));
+    //     // .then(wand => res.send('You\'ll be editing user ' + wand._id.toString()));
+    //     .then(user => res.render('todos/edit-form', {todo: todo}));
+});
 
 /* Export these routes so that they are accessible in `server.js`
 --------------------------------------------------------------- */
