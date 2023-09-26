@@ -12,8 +12,8 @@
         <h2>List of Users</h2>
     </section>
     <br>    
-    <div class="create-new-button">
-        <a class="button" href="/users/new">Create New User</a>
+    <div class="create-new-user">
+        <a class="new-user-button" href="/users/new">Create New User</a>
     </div>
     <br>
     <main>
@@ -22,12 +22,12 @@
                 <% for (let user of users) { %>
                 <li class="user-index-item">        
                     <div>
-                    <a href="/users/<%= user._id %>"><h4><%= user.name %></h4></a>
-                    </div class="users-buttons-group">
-                    <div>
+                        <a class="user-name" href="/users/<%= user._id %>"><%= user.name %></a>
+                    </div>
+                    <div class="users-buttons-group">
                         <a class="button" href="/users/<%= user._id %>/edit">Edit</a>
                         <form method="POST" action="/users/<%= user._id %>/delete?_method=DELETE">
-                            <input type="button" class="button" value="Delete" type="submit"/>
+                            <input class="delete-button" value="Delete" type="submit"/>
                         </form>                                                
                     </div>
                 </li>
