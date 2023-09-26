@@ -9,7 +9,7 @@
 <body>
     
     <section class="hero">
-        <h2>Edit User</h2>        
+        <h2>Edit Todo</h2>        
     </section>
 
     <form method="POST" action="/todos/<%= todo._id %>/update?_method=PUT">
@@ -19,26 +19,27 @@
         <br>       
         <!-- Description input -->
         <label for="description">Description:</label>
-        <input type="text" id="description" name="description" value="<%= todo.description %>>
+        <input type="text" id="description" name="description" value="<%= todo.description %>">
         <br>        
         <!-- DueDate input -->
         <label for="dueDate">Due Date:</label>
-        <input type="text" id="dueDate" name="dueDate" value="<%= todo.dueDate %>>
+        <input type="text" id="dueDate" name="dueDate" value="<%= todo.dueDate %>">
         <br>
         <!-- Priority input -->
         <label for="priority">Priority:</label>
-        <select name="priority" id="priority" value="<%= todo.priority %>> 
+        <select name="priority" id="priority" value="<%= todo.priority %>"> 
             <option value="High">High</option> 
             <option value="Normal" selected>Normal</option> 
             <option value="Low">Low</option>
         </select> 
         <!-- Status input -->       
         <label for="status">Status:</label>
-        <select name="status" id="status" value="<%= todo.status %>> 
+        <select name="status" id="status" value="<%= todo.status %>"> 
             <option value="Not Started" selected>Not Started</option> 
             <option value="In progress">In progress</option> 
             <option value="Done">Done</option>
         </select> 
+        <br>
         <br>
         <input type="submit" value="Update ToDo">
     </form>

@@ -48,13 +48,9 @@ router.get('/:todoId/edit', (req, res) => {
         { 'todos.$': true, _id: false}
     )
     .then(user => {
-        res.send(user.todos[0]);
-    });
-
-    // db.User.findById(req.params.id)
-    //     //.then(wand => console.log(wand._id.toString()));
-    //     // .then(wand => res.send('You\'ll be editing user ' + wand._id.toString()));
-    //     .then(user => res.render('todos/edit-form', {todo: todo}));
+        res.render('todos/edit-form', {todo: user.todos[0]})
+        // res.send(user.todos[0]);
+    });    
 });
 
 /* Export these routes so that they are accessible in `server.js`
