@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head.ejs', {title: 'New User'}) %>
-    <link rel="stylesheet" href="/styles/user-details.css">
+    <link rel="stylesheet" href="/styles/edit-todo.css">
 </head>
 
 <body>
@@ -12,36 +12,41 @@
         <h2>Edit Todo</h2>        
     </section>
 
-    <form method="POST" action="/todos/<%= todo._id %>/update?_method=PUT">
+    <form class="data-form" method="POST" action="/todos/<%= todo._id %>/update?_method=PUT">
         <!-- Item input -->
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" value="<%= todo.item %>" required>
-        <br>       
+        <div class="form-entry">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item" value="<%= todo.item %>" required>
+        </div>
         <!-- Description input -->
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description" value="<%= todo.description %>">
-        <br>        
+        <div class="form-entry"></div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" value="<%= todo.description %>">
+        </div>
         <!-- DueDate input -->
-        <label for="dueDate">Due Date:</label>
-        <input type="text" id="dueDate" name="dueDate" value="<%= todo.dueDate %>">
-        <br>
+        <div class="form-entry">
+            <label for="dueDate">Due Date:</label>
+            <input type="text" id="dueDate" name="dueDate" value="<%= todo.dueDate %>">
+        </div>
         <!-- Priority input -->
-        <label for="priority">Priority:</label>
-        <select name="priority" id="priority" value="<%= todo.priority %>"> 
-            <option value="High">High</option> 
-            <option value="Normal" selected>Normal</option> 
-            <option value="Low">Low</option>
-        </select> 
-        <!-- Status input -->       
-        <label for="status">Status:</label>
-        <select name="status" id="status" value="<%= todo.status %>"> 
-            <option value="Not Started" selected>Not Started</option> 
-            <option value="In progress">In progress</option> 
-            <option value="Done">Done</option>
-        </select> 
-        <br>
-        <br>
-        <input type="submit" value="Update ToDo">
+        <div class="form-entry">
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority" value="<%= todo.priority %>"> 
+                <option value="High">High</option> 
+                <option value="Normal" selected>Normal</option> 
+                <option value="Low">Low</option>
+            </select> 
+        </div>
+        <!-- Status input -->  
+        <div class="form-entry">     
+            <label for="status">Status:</label>
+            <select name="status" id="status" value="<%= todo.status %>"> 
+                <option value="Not Started" selected>Not Started</option> 
+                <option value="In progress">In progress</option> 
+                <option value="Done">Done</option>
+            </select> 
+        </div>
+        <input class="update-button" type="submit" value="Update ToDo">
     </form>
 
 </body>

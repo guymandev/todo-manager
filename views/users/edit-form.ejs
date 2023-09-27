@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {title: 'Edit User'}) %>
-    <link rel="stylesheet" href="/styles/user-details.css">
+    <link rel="stylesheet" href="/styles/edit-user.css">
 </head>
 
 <body>
@@ -11,24 +11,28 @@
         <h2>Edit User</h2>        
     </section>
 
-    <form method="POST" action="/users/<%= user._id %>/update?_method=PUT">
+    <form class="data-form" method="POST" action="/users/<%= user._id %>/update?_method=PUT">
         <!-- Name input -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<%= user.name %>" required>
-        <br>
+        <div class="form-entry">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= user.name %>" required>
+        </div>
         <!-- Alias input -->
-        <label for="alias">Alias:</label>
-        <input type="text" id="alias" name="alias" value="<%= user.alias %>">
-        <br>
+        <div class="form-entry">
+            <label for="alias">Alias:</label>
+            <input type="text" id="alias" name="alias" value="<%= user.alias %>">
+        </div>
         <!-- Hometown input -->
-        <label for="hometown">Hometown:</label>
-        <input type="text" id="hometown" name="hometown" value="<%= user.hometown %>">
-        <br>
+        <div class="form-entry">
+            <label for="hometown">Hometown:</label>
+            <input type="text" id="hometown" name="hometown" value="<%= user.hometown %>">
+        </div>
         <!-- Email input -->
-        <label for="email">Rating:</label>
-        <input type="text" id="email" name="email" value="<%= user.email %>">
-        <br>   
-        <input type="submit" value="Update User">
+        <div class="form-entry">
+            <label for="email">Rating:</label>
+            <input type="text" id="email" name="email" value="<%= user.email %>">
+        </div>
+        <input class="update-button" type="submit" value="Update User">
     </form>
 
 </body>
