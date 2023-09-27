@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head.ejs', {title: 'New User'}) %>
-    <link rel="stylesheet" href="/styles/user-details.css">
+    <link rel="stylesheet" href="/styles/new-user.css">
 </head>
 
 <body>
@@ -15,27 +15,32 @@
     </section>
     
     <div class="user-details">
-    <form method="POST" action="/users/create">
-        <!-- Name input -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <!-- Alias input -->
-        <label for="alias">Alias:</label>
-        <input type="text" id="alias" name="alias">
-        <br>
-        <!-- Hometown input -->
-        <label for="hometown">Hometown:</label>
-        <input type="text" id="hometown" name="hometown">
-        <br>
-        <!-- Email input -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <br>   
-        <input type="submit" value="Create User">
-    </form>
+        <form class="new-user-form" method="POST" action="/users/create">
+            <!-- Name input -->
+            <div class="form-entry">
+                <label for="name">Name:</label>
+                <input class="input" type="text" id="name" name="name" required>                
+            </div>
+            <!-- Alias input -->
+            <div class="form-entry">
+                <label for="alias">Alias:</label>
+                <input class="input" type="text" id="alias" name="alias">                
+            </div>
+            <!-- Hometown input -->
+            <div class="form-entry">
+                <label for="hometown">Hometown:</label>
+                <input class="input" type="text" id="hometown" name="hometown">            
+            </div>
+            <!-- Email input -->
+            <div class="form-entry">
+                <label for="email">Email:</label>
+                <input class="input" type="email" id="email" name="email">                
+            </div>              
+            
+            <input class="update-button" type="submit" value="Create User">
+           
+        </form>
     </div>
-
 </body>
 
 </html>

@@ -1,0 +1,44 @@
+.new-user-form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+    max-height: 192px;
+    width: 300px;    
+
+}
+
+.form-entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+input[type="submit"] {
+    /* margin: 0 0 0 50%; */
+    width: 92px;
+    height: 40px;
+    margin-left: auto;
+}
+
+
+.update-button {
+  
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: auto;
+    color: #ffffff;
+    background-color: #7aa8b7;
+    border: 1px solid black;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+  }
+  .update-button:hover {
+    background-color: #c2c7c7;
+  }

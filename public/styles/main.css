@@ -24,24 +24,60 @@ nav, .nav-links {
     }
 }
 
-.button {
+/* Styling pertaining to the buttons for each user row */
+
+.users-buttons-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+  }
+  
+  .button {
+      display: inline-block;
+      padding: 10px 20px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: auto;
+      color: #ffffff;
+      background-color: #7aa8b7;
+      border: 1px solid black;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+  }
+  .button:hover {
+    background-color: #c2c7c7;
+  }
+  
+  /* The below stylings pertain to the delete "button" 
+  which uses an input element styled to look like a button. 
+  Adjust the form height/width is required to make the "button"
+  the same size as a styled "button" anchor tag.*/
+  
+  form {
+    width: 92px;
+    height: 40px;
+  }
+  
+  .delete-button {
+  
     display: inline-block;
-    padding: 10px 20px;
-    width: 50px;
+    height: 100%;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     vertical-align: auto;
     color: #ffffff;
     background-color: #7aa8b7;
+    border: 1px solid black;
     border-radius: 6px;
     outline: none;
     transition: 0.3s;
-}
-.button:hover {
-  background-color: #c2c7c7;
-}
-
-form {
-    width: 92px;
-    height: 40px;
-}
+  }
+  .delete-button:hover {
+    background-color: #c2c7c7;
+  }
+  
