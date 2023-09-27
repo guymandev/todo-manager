@@ -28,6 +28,10 @@ nav, .nav-links {
     background: radial-gradient(lightyellow, skyblue);
 }
 
+.hero {    
+    text-align: center;   
+}
+
 /* Styling pertaining to the buttons for each user row */
 
 .users-buttons-group {
@@ -36,38 +40,38 @@ nav, .nav-links {
     align-items: center;
     width: 200px;
     height: 100%;
-  }
+}
   
-  .button {
-      display: inline-block;
-      padding: 10px 20px;
-      width: 50px;
-      text-align: center;
-      text-decoration: none;
-      vertical-align: auto;
-      color: #ffffff;
-      background-color: #7aa8b7;
-      border: 1px solid black;
-      border-radius: 6px;
-      outline: none;
-      transition: 0.3s;
-  }
-  .button:hover {
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: auto;
+    color: #ffffff;
+    background-color: #7aa8b7;
+    border: 1px solid black;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.button:hover {
     background-color: #c2c7c7;
-  }
+}
   
   /* The below stylings pertain to the delete "button" 
   which uses an input element styled to look like a button. 
   Adjust the form height/width is required to make the "button"
   the same size as a styled "button" anchor tag.*/
   
-  form {
+form {
     width: 92px;
     height: 40px;
-  }
+}
   
-  .delete-button {
-  
+.delete-button {
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -80,8 +84,8 @@ nav, .nav-links {
     border-radius: 6px;
     outline: none;
     transition: 0.3s;
-  }
-  .delete-button:hover {
+}
+.delete-button:hover {
     background-color: #c2c7c7;
-  }
+}
   

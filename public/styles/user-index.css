@@ -19,6 +19,7 @@ h2 {
   border-radius: 6px;
   outline: none;
   transition: 0.3s;
+  margin: 0 auto;
 }
 
 .user-index-item {

@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs', {title: 'New User'}) %>
+    <%- include('../partials/head.ejs', {title: 'Edit Todo'}) %>
     <link rel="stylesheet" href="/styles/edit-todo.css">
 </head>
 
 <body class="radial-blue">
     
+    <%- include('../partials/nav.ejs') %>
+
     <section class="hero">
         <h2>Edit Todo</h2>        
     </section>
@@ -19,7 +21,7 @@
             <input type="text" id="item" name="item" value="<%= todo.item %>" required>
         </div>
         <!-- Description input -->
-        <div class="form-entry"></div>
+        <div class="form-entry">
             <label for="description">Description:</label>
             <input type="text" id="description" name="description" value="<%= todo.description %>">
         </div>
