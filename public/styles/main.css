@@ -24,6 +24,10 @@ nav, .nav-links {
     }
 }
 
+.radial-blue {
+    background: radial-gradient(lightyellow, skyblue);
+}
+
 /* Styling pertaining to the buttons for each user row */
 
 .users-buttons-group {
