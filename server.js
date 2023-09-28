@@ -23,14 +23,6 @@ const app = express();
 
 /* Configure the app to refresh the browser when nodemon restarts
 --------------------------------------------------------------- */ 
-// const liveReloadServer = livereload.createServer();
-// liveReloadServer.server.once("connection", () => {
-//     // wait for nodemon to fully restart before refreshing the page
-//     setTimeout(() => { 
-//         liveReloadServer.refresh("/");
-//     }, 100);
-// }); 
-
 // Detect if running in a dev environment
 if (process.env.ON_HEROKU === 'false') {
     // Configure the app to refresh the browser when nodemon restarts

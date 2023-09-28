@@ -23,12 +23,12 @@
         <!-- Description input -->
         <div class="form-entry">
             <label for="description">Description:</label>
-            <input type="text" rows="4" id="description" name="description" value="<%= todo.description %>"></textarea>
+            <input type="text" rows="4" id="description" name="description" value="<%= todo.description %>"></input>
         </div>
         <!-- DueDate input -->
         <div class="form-entry">
             <label for="dueDate">Due Date:</label>
-            <input type="text" id="dueDate" name="dueDate" value="<%= todo.dueDate %>">
+            <input type="text" id="dueDate" name="dueDate" value="<%= todo.formatDate('dueDate') %>">
         </div>
         <!-- Priority input -->
         <div class="form-entry">

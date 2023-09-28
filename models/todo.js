@@ -9,4 +9,13 @@ const todoSchema = new mongoose.Schema({
     status: {type: String, enum: ['Not Started','In progress','Done'], default: 'Not Started'}
 });
 
+// Define a schema method for date formatting
+todoSchema.methods.formatDate = function(dateProperty) {
+    const newDate = new Date(this[dateProperty]);
+    let formattedDate = `${ `0${ newDate.getMonth() + 1 }`.slice(-2) }/`;
+        formattedDate += `${ `0${ newDate.getDate() }`.slice(-2) }/`;
+        formattedDate += `${ newDate.getFullYear() }`;
+    return formattedDate;
+};
+
 module.exports = todoSchema;
