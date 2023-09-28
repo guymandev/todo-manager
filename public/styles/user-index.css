@@ -22,6 +22,10 @@ h2 {
   margin: 0 auto;
 }
 
+.new-user-button:hover {
+  background-color: #c2c7c7;
+}
+
 .user-index-item {
 
     display: flex;

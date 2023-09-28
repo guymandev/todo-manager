@@ -1,3 +1,7 @@
+* {
+    font-family: serif;
+}
+
 header {
 
     text-align: center;
@@ -73,6 +77,7 @@ form {
   
 .delete-button {
     display: inline-block;
+    font-size: 16px;
     height: 100%;
     width: 100%;
     text-align: center;

@@ -23,7 +23,7 @@
     <br>
     <div>
         <h2>ToDos</h2>
-        <a href="/todos/new/<%= user._id %>"><h4>Create Todo</h4></a>
+        <a class="create-todo-button" href="/todos/new/<%= user._id %>">Create Todo</a>
         <ul>
             <% for (let todo of user.todos) { %>
                 <li class="todo-item">
@@ -36,7 +36,7 @@
                 <div class="users-buttons-group">
                     <a class="button" href="/todos/<%= todo._id %>/edit">Edit</a>
                     <form method="POST" action="/todos/<%= todo._id %>/delete?_method=DELETE">
-                        <input class="delete-button" value="Delete" type="submit"/>
+                        <button class="delete-button" type="submit">Delete</button>
                     </form>                                                
                 </div>                
             </li>
