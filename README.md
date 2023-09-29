@@ -20,7 +20,7 @@ MEN stack application demonstrating use of 7 restful routes for CRUD operations
 
 ### CRUD Table
 
-![CRUD table](/public/assets/Todo-Manager-CRUD-routes.jpg "CRUD table")\
+![CRUD table](/public/assets/Todo-Manager-CRUD-routes.jpg "CRUD table")
 
 ### Installation Instructions
 
