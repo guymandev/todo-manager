@@ -67,7 +67,7 @@ nav, .nav-links {
   
   /* The below stylings pertain to the delete "button" 
   which uses an input element styled to look like a button. 
-  Adjust the form height/width is required to make the "button"
+  Adjusting the form height/width is required to make the "button"
   the same size as a styled "button" anchor tag.*/
   
 form {
