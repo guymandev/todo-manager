@@ -61,7 +61,7 @@ MEN stack application demonstrating use of 7 restful routes for CRUD operations
 ![Edit User](/public/assets/IMG_6580.jpg "Edit User")\
 ![User Details](/public/assets/IMG_6581.jpg "User Details")\
 ![New ToDo](/public/assets/IMG_6582.jpg "New ToDo")\
-![Edit ToDo](/public/assets/IMG_6583.jpg "Edit ToDo")\
+![Edit ToDo](/public/assets/IMG_6583.jpg "Edit ToDo")
 
 ### Screenshots
 
@@ -71,7 +71,7 @@ MEN stack application demonstrating use of 7 restful routes for CRUD operations
 ![Edit User](/public/assets/edit-user.jpg "Edit User")\
 ![User Details](/public/assets/user-detail.jpg "User Details")\
 ![New ToDo](/public/assets/create-todo.jpg "New ToDo")\
-![Edit ToDo](/public/assets/edit-todo.jpg "Edit ToDo")\
+![Edit ToDo](/public/assets/edit-todo.jpg "Edit ToDo")
 
 ### Learnings
 
