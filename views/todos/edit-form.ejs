@@ -23,7 +23,7 @@
         <!-- Description input -->
         <div class="form-entry">
             <label for="description">Description:</label>
-            <input type="text" rows="4" id="description" name="description" value="<%= todo.description %>"></input>
+            <textarea type="text" rows="4" id="description" name="description"><%= todo.description %></textarea>
         </div>
         <!-- DueDate input -->
         <div class="form-entry">
@@ -48,7 +48,7 @@
                 <option value="Done">Done</option>
             </select> 
         </div>
-        <input class="update-button" type="submit" value="Update ToDo">
+        <input class="update-button" type="submit" value="Update ToDo"></input>
     </form>
 
 </body>
