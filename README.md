@@ -165,3 +165,11 @@ MEN stack application demonstrating use of 7 restful routes for CRUD operations
     ```
     2. views/todos/edit-form.ejs
     `value="<%= todo.formatDate('dueDate') %>"` 
+
+4. I successfully utilized Flexbox for the first time. I started with a master `<div>` container. Inside the master container I created rows of child `<div>` elements, within each of them, I placed a matched pair of label/input elements. 
+
+&nbsp; &nbsp;By making each row a Flexbox, I could then use `justify-content: space-between;` to get the labels on the left and the input elements on the right. 
+
+&nbsp; &nbsp;I also applied Flexbox to the master `<div>` container. That then allowed me to apply a setting of `flex-direction: column;` to space out the rows of `<div>` elements, once again using `justify-content: space-between;`.
+
+&nbsp; &nbsp;One thing that created confusion with implementing the flexbox layout at first was that I had added in a number of `<br>` elements to create spacing, when all I had was my initial, raw HTML. Those extra `<br>` elements were then taken into account for the `justify-content: space-between;` setting, which threw everything off until they were removed.
