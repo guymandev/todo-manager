@@ -33,19 +33,19 @@
         <!-- Priority input -->
         <div class="form-entry">
             <label for="priority">Priority:</label>
-            <select name="priority" id="priority" value="<%= todo.priority %>"> 
-                <option value="High">High</option> 
-                <option value="Normal" selected>Normal</option> 
-                <option value="Low">Low</option>
+            <select name="priority" id="priority"> 
+                <option <%= todo.priority === "High" ? 'selected' : "" %> value="High">High</option> 
+                <option <%= todo.priority === "Normal" ? 'selected' : "" %> value="Normal">Normal</option> 
+                <option <%= todo.priority === "Low" ? 'selected' : "" %> value="Low">Low</option>
             </select> 
         </div>
         <!-- Status input -->  
         <div class="form-entry">     
             <label for="status">Status:</label>
-            <select name="status" id="status" value="<%= todo.status %>"> 
-                <option value="Not Started" selected>Not Started</option> 
-                <option value="In progress">In progress</option> 
-                <option value="Done">Done</option>
+            <select name="status" id="status"> 
+                <option <%= todo.status === "Not Started" ? 'selected' : "" %> value="Not Started">Not Started</option> 
+                <option <%= todo.status === "In progress" ? 'selected' : "" %> value="In progress">In progress</option> 
+                <option <%= todo.status === "Done" ? 'selected' : "" %> value="Done">Done</option>
             </select> 
         </div>
         <input class="update-button" type="submit" value="Update ToDo"></input>
