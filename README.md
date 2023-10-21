@@ -173,3 +173,16 @@ MEN stack application demonstrating use of 7 restful routes for CRUD operations
 &nbsp; &nbsp;I also applied Flexbox to the master `<div>` container. That then allowed me to apply a setting of `flex-direction: column;` to space out the rows of `<div>` elements, once again using `justify-content: space-between;`.
 
 &nbsp; &nbsp;One thing that created confusion with implementing the flexbox layout at first was that I had added in a number of `<br>` elements to create spacing, when all I had was my initial, raw HTML. Those extra `<br>` elements were then taken into account for the `justify-content: space-between;` setting, which threw everything off until they were removed.
+
+5. I learned how to set the value of an HTML dropdown selector by way of a ternary operation that added the "selected" attribute to the option element in question. 
+    1. edit-form.ejs
+
+```
+<div class="form-entry">     
+        <label for="status">Status:</label>
+        <select name="status" id="status"> 
+            <option <%= todo.status === "Not Started" ? 'selected' : "" %> value="Not Started">Not Started</option> 
+            <option <%= todo.status === "In progress" ? 'selected' : "" %> value="In progress">In progress</option> 
+            <option <%= todo.status === "Done" ? 'selected' : "" %> value="Done">Done</option>
+        </select> 
+</div>
